@@ -7,9 +7,7 @@ public:
             if(prices[i]<m_buy){
                 m_buy = prices[i];
             }
-            else{
-                max_profit = max(max_profit , prices[i]-m_buy);
-            }
+            max_profit = max(max_profit , prices[i]-m_buy);
         }
         return max_profit;
     }
