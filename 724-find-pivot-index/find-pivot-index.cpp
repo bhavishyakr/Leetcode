@@ -14,9 +14,7 @@ public:
         return sum;
     }
     int pivotIndex(vector<int>& nums) {
-        // cout<<"gdxgs0";
         for(int i=0 ; i<nums.size(); i++){
-        cout<<Ls(i,nums)<<","<<Rs(i,nums)<<endl;
             if(Ls(i , nums) == Rs(i , nums))
                 return i;
         }
