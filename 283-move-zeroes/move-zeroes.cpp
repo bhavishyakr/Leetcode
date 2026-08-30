@@ -7,11 +7,8 @@ public:
                 p++;
             }
             if(p < nums.size()){
-                // cout<<i<<" "<<p<<endl;
                 swap(nums[i++] , nums[p++]);  
             }
         }
-        // while(i<nums.size())
-        //     nums[i]=0;
     }
 };
