@@ -18,7 +18,5 @@ public:
         int i=0;
         for(int m=k ; m<nums.size(); m++) 
             nums[m] = arr2[i++]; 
-        // for(int el : arr2)
-        //     cout<<el<<" "; 
         }
 };
