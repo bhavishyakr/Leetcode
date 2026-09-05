@@ -2,7 +2,7 @@ class Solution {
 public:
     int singleNumber(vector<int>& nums) {
         sort(nums.begin(), nums.end());
-        // int binary_search(){
+        
             int st = 0, end = nums.size()-1;
             while(st <= end){
 
@@ -18,21 +18,19 @@ public:
                     return nums[mid];
                 if( mid % 2 == 0 ){
                     if(nums[mid] == nums[mid-1]){ 
-                    //go left
                     end = mid - 1;  
                     }else{
                         st = mid + 1;
                     }
-                }else{  // (mid-st % 2 != 0)
+                }else{  
                     if(nums[mid] == nums[mid-1])
                         st = mid + 1;
                     else
                         end = mid - 1;
                     }
-                // else
-                //     return nums[mid];
+                
             }
-        // }
+        
         return -1;
     }
 };
