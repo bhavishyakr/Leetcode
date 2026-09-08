@@ -4,6 +4,7 @@ public:
         sort(intervals.begin() , intervals.end());
 
         vector<vector<int>>ans;
+        int i,j;
         for(int i=0; i<intervals.size() ; i++){
             int st = intervals[i][0];
             int end = intervals[i][1];
@@ -17,6 +18,7 @@ public:
                     break;
             }
             ans.push_back({st,end});
+            i=j;
         }
     
         return ans;
