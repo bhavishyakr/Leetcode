@@ -21,14 +21,10 @@ public:
             sum += nums[i];
             nums[i] *= -1;
         }
-        for(int el : nums)
-            cout<<el;
-        cout<<endl;
         int y = kadane(nums);
-        cout<<sum<<y<<endl;
-        cout<<sum+y;
         if(sum+y == 0 )
             return x;
+            
         return (max(x , sum+y));
     }
 };
