@@ -12,13 +12,10 @@ public:
                 freq = 1;
                 el = nums[i];
             }
-
-            if(freq > nums.size()/3)
+            if(freq > (nums.size()/3 ) )
                 temp.push_back(nums[i]);
 
         }
-        for(int val:temp)
-            cout<<val<<" ";
         vector<int>ans;
         if(temp.size()>0){
             ans.push_back(temp[0]);
