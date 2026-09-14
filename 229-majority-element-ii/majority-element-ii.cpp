@@ -19,14 +19,6 @@ public:
         }
             if(freq > (nums.size()/3 ) )
                 temp.push_back(nums.back());
-        // vector<int>ans;
-        // if(temp.size()>0){
-        //     ans.push_back(temp[0]);
-        //     for(int i=1; i<temp.size(); i++)
-        //         if(temp[i] != temp[i-1]){
-        //             ans.push_back(temp[i]);
-        //         }
-        // }
         return temp;
     }
 };
