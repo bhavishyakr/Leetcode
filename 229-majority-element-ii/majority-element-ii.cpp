@@ -7,23 +7,26 @@ public:
         int el = nums[0];
         for(int i=0; i<nums.size(); i++){
             if(nums[i] == el){
-                freq++;
+                freq+=1;
             }else{
+            if(freq > (nums.size()/3 ) )
+                temp.push_back(nums[i-1]);
+
                 freq = 1;
                 el = nums[i];
             }
-            if(freq > (nums.size()/3 ) )
-                temp.push_back(nums[i]);
 
         }
-        vector<int>ans;
-        if(temp.size()>0){
-            ans.push_back(temp[0]);
-            for(int i=1; i<temp.size(); i++)
-                if(temp[i] != temp[i-1]){
-                    ans.push_back(temp[i]);
-                }
-        }
-        return ans;
+            if(freq > (nums.size()/3 ) )
+                temp.push_back(nums.back());
+        // vector<int>ans;
+        // if(temp.size()>0){
+        //     ans.push_back(temp[0]);
+        //     for(int i=1; i<temp.size(); i++)
+        //         if(temp[i] != temp[i-1]){
+        //             ans.push_back(temp[i]);
+        //         }
+        // }
+        return temp;
     }
 };
