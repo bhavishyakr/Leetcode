@@ -9,14 +9,12 @@ int subarr(int idx , vector<int> nums){
             pre++;
         else
             break;
-        // p_idx--;
     }
     while(++s_idx < nums.size()) {
         if(nums[s_idx] != 0)
             suff++;
         else
             break;
-        // s_idx++;
     }
     return pre + suff;
 }
@@ -36,7 +34,6 @@ int subarr(int idx , vector<int> nums){
             }
                 i++;
         }
-        cout<< ans <<" "<<nums.size();
         if(ans)
             return nums.size()-1;
         return maxi;
