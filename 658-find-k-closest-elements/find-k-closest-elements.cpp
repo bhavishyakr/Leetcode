@@ -14,7 +14,6 @@ public:
         for(int i=s ; i<=e; i++){
             ans.push_back(arr[i]);
         } 
-        cout<<s<<" "<<e<<endl;
         return ans;
     }
 };
