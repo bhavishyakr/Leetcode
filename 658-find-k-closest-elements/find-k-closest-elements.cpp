@@ -5,10 +5,10 @@ public:
         int e = arr.size()-1;
         vector<int>ans;
         while(e - s >= k){
-            if(abs(arr[s] - x)  > abs(arr[e] - x)){
-                s++;
-            }else{
+            if(abs(arr[s] - x)  <= abs(arr[e] - x)){
                 e--;
+            }else{
+                s++;
             }
         }
         for(int i=s ; i<=e; i++){
