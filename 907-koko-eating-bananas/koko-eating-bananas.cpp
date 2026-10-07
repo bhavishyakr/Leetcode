@@ -11,8 +11,8 @@ public:
             int hours = 0;
             for(long long int el : piles)
             {
-                hours += ceil(double(el) / mid) ;
-                // hours += (el + mid - 1 ) / mid;
+                // hours += ceil(double(el) / mid) ;
+                hours += (el + mid - 1 ) / mid;
             }
             if(hours <= h){
                 high = mid;
