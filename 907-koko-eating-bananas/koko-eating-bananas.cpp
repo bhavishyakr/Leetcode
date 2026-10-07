@@ -3,9 +3,6 @@ public:
     int minEatingSpeed(vector<int>& piles, int h) {
         int low = 1;
         int high = *max_element(piles.begin() , piles.end());
-        cout<<high;
-        long long hours =INT_MAX;
-        int ans;
         while( low < high ){
             int mid = low + (high-low)/2;
             int hours = 0;
