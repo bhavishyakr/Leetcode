@@ -13,14 +13,15 @@ public:
         }
         return days;
     }
+    
     int sums(vector<int> weights){
         int sum = 0;
         for (int weight : weights)
             sum += weight;
         return sum;
     }
+
     int shipWithinDays(vector<int>& weights, int days) {
-        // int low = 1;
         int low = *max_element(weights.begin() , weights.end() );
         int high = sums(weights);
         int mid , ans;
