@@ -1,7 +1,7 @@
 class Solution {
 public:
     vector<int> nextGreaterElements(vector<int>& nums) {
-        vector<int>ans;
+        vector<int>ans(nums.size(),-1);
         stack<int>s;
         for(int i=0;i<nums.size();i++)
             s.push(nums.size() - 1 - i);
@@ -10,14 +10,12 @@ public:
             while(( !s.empty()) && nums[s.top()] <= nums[r]){
                 s.pop();
             }
-            if(s.empty())
-                ans.insert(ans.begin(), -1);
-            else
-                ans.insert(ans.begin(), nums[s.top()]);
+            if(!s.empty())
+                ans[r] = nums[s.top()];
             s.push(r);
             r--;
         }
-        // reverse(ans.begin(), ans.end());
+        
 
         return ans;
     }
