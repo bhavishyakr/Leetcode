@@ -11,13 +11,13 @@ public:
                 s.pop();
             }
             if(s.empty())
-                ans.push_back(-1);
+                ans.insert(ans.begin(), -1);
             else
-                ans.push_back(nums[s.top()]);
+                ans.insert(ans.begin(), nums[s.top()]);
             s.push(r);
             r--;
         }
-        reverse(ans.begin(), ans.end());
+        // reverse(ans.begin(), ans.end());
 
         return ans;
     }
