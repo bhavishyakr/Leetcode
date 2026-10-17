@@ -7,10 +7,9 @@ public:
         int prod = 1;
         int r = 0 , l = 0;
         while(r < nums.size()){
-            cout<<r<<" ";
             prod *= nums[r];  
 
-            while(l<nums.size() && prod >= k){
+            while(prod >= k){
                 prod /= nums[l];
                 l++;
                 }
