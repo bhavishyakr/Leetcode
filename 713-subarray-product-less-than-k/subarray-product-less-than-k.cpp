@@ -1,19 +1,25 @@
 class Solution {
 public:
     int numSubarrayProductLessThanK(vector<int>& nums, int k) {
+        if(k <= 1)
+            return 0;
         int count = 0;
-        for(int i=0; i<nums.size(); i++){
         int prod = 1;
-            for(int j=i; j<nums.size(); j++){
-                prod *= nums[j];
-                if(prod < k){
-                    count++;
-                }else{
-                    prod = 1;
-                    break;
+        int r = 0 , l = 0;
+        while(r < nums.size()){
+            cout<<r<<" ";
+            prod *= nums[r];  
+
+            while(l<nums.size() && prod >= k){
+                prod /= nums[l];
+                l++;
                 }
-            }
+
+            count += r-l+1;
+            r++;
         }
+            
+
         return count;
     }
 };
