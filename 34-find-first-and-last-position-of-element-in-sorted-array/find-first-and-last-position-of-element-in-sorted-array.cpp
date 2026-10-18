@@ -8,7 +8,6 @@ public:
         while(low <= high){
             int mid = low + (high - low)/2;
             if(nums[mid] == target){
-                cout<<"mid"<<mid<<" ";
                 ans[0] = mid;
                 high = mid-1;
             }
@@ -23,7 +22,6 @@ public:
         while(low <= high){
             int mid = low + (high - low)/2;
             if(nums[mid] == target){
-                cout<<"mid"<<mid<<" ";
                 ans[1] = mid;
                 low = mid+1;
             }
