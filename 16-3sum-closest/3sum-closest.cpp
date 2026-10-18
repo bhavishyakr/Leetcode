@@ -11,12 +11,9 @@ public:
             if(abs(target - sum) < abs(target - result)){
                 result = sum;
             }
-            if(target == sum)
-                return sum;
-            if(sum < target)
-                st++;
-            else
-                end--;
+            if(target == sum) return sum;
+            if(sum < target) st++;
+            else end--;
         }
     }
 
