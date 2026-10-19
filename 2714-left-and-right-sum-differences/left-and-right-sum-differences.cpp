@@ -11,7 +11,6 @@ public:
             suff_sum[i] = nums[i+1] + suff_sum[i+1];
         vector<int>ans(nums.size(),0);
         for(int i = 0; i<nums.size(); i++){
-            cout<<"ps"<<pre_sum[i]<<" "<<"ss"<<suff_sum[i]<<" ";
             ans[i] = abs(pre_sum[i] - suff_sum[i]);
         }
         
