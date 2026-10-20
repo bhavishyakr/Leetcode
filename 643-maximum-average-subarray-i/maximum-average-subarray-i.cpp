@@ -10,15 +10,15 @@ public:
                 sum += nums[r];
                 max_avg = sum;
             }
-            if(r == k-1){
-                max_avg = sum / k ;
-            }
+            // if(r == k-1){
+            //     max_avg = sum  ;
+            // }
             else if(r >= k){
                 sum = sum + nums[r] - nums[l++];
-                max_avg = max(max_avg, sum/k);
+                max_avg = max(max_avg, sum);
             }
             r++;
         }
-        return max_avg;
+        return max_avg/k;
     }
 };
