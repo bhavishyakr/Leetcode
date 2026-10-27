@@ -7,7 +7,6 @@ public:
             r--;
         while(r >= 0 && s[r] != 32){
             count++;
-            cout<<s[r]<<' ';
             r--;
         }
         return count;
