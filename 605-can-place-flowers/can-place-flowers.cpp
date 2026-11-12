@@ -18,11 +18,8 @@ public:
             if((i-1 >=0 && i+1 <flowerbed.size() && flowerbed[i-1] == 0 && flowerbed[i+1] == 0) && flowerbed[i] == 0){
                 flowers++;
                 flowerbed[i] = 1;
-                cout<<flowers<<' '<<i<<" ";
-                cout<<flowerbed[i-1]<<"b"<<flowerbed[i+1]<<'f';
             } 
         }
-        cout<<flowers<<' ';
         return flowers >= n;
     }
 };
