@@ -9,8 +9,10 @@ public:
             sum += nums[i];
             rem = sum % k;
             if(rem == 0 && i > 0) return true;
-            if( mp.find(rem) != mp.end() && (i - mp[rem] >= 2) ) return true; 
-            if(mp.find(rem) == mp.end()) mp[rem] = i;
+            if( mp.find(rem) != mp.end()){
+                if(i - mp[rem] >= 2) return true; 
+            }else
+                mp[rem] = i;
         }
         return false;
     }
