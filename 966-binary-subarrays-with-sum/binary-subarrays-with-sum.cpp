@@ -14,6 +14,7 @@ public:
        return c;
     }
     int atMost(vector<int> nums , int goal){
+        if(goal < 0 ) return 0;
         int h = 0 , t = 0 ,sum = 0, c = 0;
        while(t < nums.size()){
             sum += nums[t];
