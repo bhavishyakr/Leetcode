@@ -1,8 +1,8 @@
 class Solution {
 public:
-    int value(int row , int col , vector<vector<int>>&numRows){
+    int value(int row , int col , vector<vector<int>>&ans){
         int sum;
-        sum = numRows[row][col-1] + numRows[row][col];
+        sum = ans[row][col-1] + ans[row][col];
         return sum;
     }
     vector<vector<int>> generate(int numRows) {
