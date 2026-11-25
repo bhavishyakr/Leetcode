@@ -11,6 +11,8 @@ public:
         sum = nums[i] + nums[st] + nums[end];
         if(sum == 0){
             s.insert({nums[i] , nums[st] , nums[end]});
+            while(st < end && nums[st] == nums[st+1]) st++;
+            while(st < end && nums[end] == nums[end-1]) end--;
             st++;
         }
         else if(sum < 0) st++;
